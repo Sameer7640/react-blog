@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Daily Trends - A Simple Blog"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!-- Animate on scroll CSS CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Bootstrap CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Google Fonts link for Lato, Raleway and Playfair Display -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900|Lora:400,700|Playfair+Display:400,400i,600i,700,900|Raleway:300,400,500,600,700,900&display=swap" rel="stylesheet">
+    <title>Daily Trends - A Simple React.js Blog</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <header class="header">
+    <section class="secondary-header">
+      <div class="container">
+        <span class="px-1">Saturday, 29 February, 2020</span>
+        <span class="bg-clr-primary mx-1 text-white p-1 px-2">Trending</span>
+        <span class="typer" id="main" data-words="Instagram’s big redesign goes live with black-and-white app, The only thing that overcomes hard luck is hard work, Not who has much is rich but who gives much, Success is not a good teacher failure makes you humble" data-delay="20" data-deleteDelay="1500"></span>
+        <span class="cursor" data-owner="main"></span>
+        <span class="float-right mx-2"><a href="#" class="text-deco clr-primary hover-primary transition">Privacy Policy</a></span>
+        <span class="float-right"><a href="#" class="text-deco clr-primary hover-primary  transition">Terms and conditions</a></span>
+      </div>
+    </section>
+    <section class="logo-area mb-2">
+      <div class="container">
+        <!-- Logo DailyTrends -->
+        <h1 class="ff-playfair display-3" data-aos="fade-right">Daily<small>Trends</small></h1>
+        <!-- Logo DailyTrends -->
+        <div class="search-section">
+          <input type="text" name="search" placeholder="Search" id="search-box" class="demo">
+          <ul class="m-0">
+            <div class="icon-container">
+                  <div id="menuicon">
+                    <div class="bar bar1"></div>
+                    <div class="bar bar2"></div>
+                  </div>
+              </div>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Sign Up</a></li>
+            <li><a href="#">Login</a></li>
+            <li><i class="fas fa-search" onclick="searchToggle()"></i></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+      <header class="menu-items-header" id="navbar">
+        <div class="container">
+          <!-- Navigation Menu - Main Nav menu -->
+          <nav class="menu-items-header-nav" data-aos="flip-up">
+              <button onclick="toggleMenu()">View All Categories &nbsp; <i class="fas fa-bars"></i></button>
+            <ul class="mb-0">
+              <li><a href="#">Technology</a></li>
+              <li><a href="#">Entertainment</a></li>
+              <li><a href="#">Education</a></li>
+              <li><a href="#">Recipes</a></li>
+              <li><a href="#">Fashion & Lifestyle</a></li>
+              <li><a href="#">Space Research</a></li>
+              <li><a href="#">Thoughts Catalog</a></li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Reviews</a></li>
+              <li><a href="#">More</a></li>
+            </ul>
+          </nav>
+          <!-- Navigation Menu - Main Nav menu -->
+        </div>
+      </header>
+    </div>
+    <aside class="mobile-menu-toggle">
+      <div class="icon-container" onclick="hideSidebar()">
+            <div id="menuicon">
+              <div class="bar bar1"></div>
+              <div class="bar bar2"></div>
+            </div>
+        </div>
+    </aside>
+  </header>
+
+  <!--======= Main Section - Hero Section ========= -->
+  <!--======= Main Section - Hero Section ========= -->
+  <section class="main-content my-5">
+    <div class="container">
+      <div class="hot-topics">
+        <h1 class="text-center section-heading my-5" data-aos="flip-up">Trending Now</h1>
+        <div class="row" data-aos="fade-right">
+          <div class="col-md-4 mb-2 post-item post-one">
+          <div class="post-image-small">
+            <a href="#" class="view-post">View Post</a>
+            <a href="#"><img src="images/post1.jpeg"></a>
+          </div>
+          <div class="post-content">
+            <a href="#" class="text-deco clr-primary"><h3 class="post-heading">Ex-Banker Gary Cohn Emerges as Economic-Policy Powerhouse</h3></a>
+            <div class="d-flex justify-content-between"><span class="date-posted-trending-now"><small><i class="far fa-clock"></i> February, 5th 2018</small></span><p><span><small><a href="#" class="text-deco clr-primary">News</a></small></span></p></div>
+            <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipiduet dolore magna aliqua.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-2 post-item post-two">
+          <div class="post-image-small">
+            <a href="#" class="view-post">View Post</a>
+            <a href="#" ><img src="images/post2.jpg"></a>
+          </div>
+          <div class="post-content">
+            <a href="#" class="text-deco clr-primary"><h3 class="post-heading">Hackers Find Celebrities’ Weak Links in Their Vendor Chains</h3></a>
+            <div class="d-flex justify-content-between"><span class="date-posted-trending-now"><small><i class="far fa-clock"></i> February, 5th 2018</small></span><p><span><small><a href="#" class="text-deco clr-primary">Telecommunication</a></small></span></p></div>
+            <p class="post-description">Lorem ipsum dolor sit amet, coned do eiusmod  tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-2 post-item post-three">
+          <div class="post-image-small">
+            <a href="#" class="view-post">View Post</a>
+            <a href="#"><img src="images/post3.jpg"></a>
+          </div>
+          <div class="post-content">
+            <a href="#" class="text-deco clr-primary"><h3 class="post-heading">Detoxifying Summer Drink Recipes</h3></a>
+            <div class="d-flex justify-content-between"><span class="date-posted-trending-now"><small><i class="far fa-clock"></i> February, 5th 2018</small></span><p><span><small><a href="#" class="text-deco clr-primary">Travel</a></small></span></p></div>
+            <p class="post-description">Lorem ipsum dolor sit amet, consectetur ased do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+        </div>
+      </div>
+      <!-- =======-----------Cards-Section-------------==== -->
+        <div class="row">
+          <div class="col-md-8"><h1 class="text-center section-heading mb-2 mt-4">Latest Posts</h1></div>
+          <div class="col-md-col"></div>
+        </div>
+      <div class="row">
+        <div class="col-md-8 full-posts">
+          <div class="post-item">
+            <div class="post-image position-relative">
+              <a href="#"><img src="images/psot4.jpg"></a>
+              <div class="category-name"><a href="#">Travel</a></div>
+            </div>
+            <div class="post-description my-3">
+              <a href="#" class="text-deco transition clr-primary"><h2 class="post-heading">20 Photos to Inspire You to Visit Petra</h2></a>
+              <span class="date-posted-trending-now"><small><i class="far fa-clock"></i> February, 5th 2018</small></span>
+              <p class="my-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.</p><a href="#" class="view-full">Read More..</a>
+            </div>
+          </div>
+          <div class="post-item" data-aos="fade-bottom">
+            <div class="post-image position-relative">
+              <a href="#"><img src="images/post5.jpeg"></a>
+              <div class="category-name"><a href="#">Motivational</a></div>
+            </div>
+            <div class="post-description my-3">
+              <a href="#" class="text-deco transition clr-primary"><h2 class="post-heading">Great things in business are never done by one person.</h2></a>
+              <span class="date-posted-trending-now"><small><i class="far fa-clock"></i> February, 5th 2018</small></span>
+              <p class="my-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.</p><a href="#" class="view-full">Read More..</a>
+            </div>
+          </div>
+          <div class="post-item" data-aos="fade-bottom">
+            <div class="post-image position-relative">
+              <a href="#"><img src="images/post6.jpg"></a>
+              <div class="category-name"><a href="#">Sports</a></div>
+            </div>
+            <div class="post-description my-3">
+              <a href="#" class="text-deco transition clr-primary"><h2 class="post-heading">Pakistan Captain Bismah Maroof Will No Longer Play Women’s T20 World Cup</h2></a>
+              <span class="date-posted-trending-now"><small><i class="far fa-clock"></i> February, 5th 2018</small></span>
+              <p class="my-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.</p><a href="#" class="view-full">Read More..</a>
+            </div>
+          </div>
+          <div class="post-item" data-aos="fade-bottom">
+            <div class="post-image position-relative">
+              <a href="#"><img src="images/post7.jpg"></a>
+              <div class="category-name"><a href="#">Business</a></div>
+            </div>
+            <div class="post-description my-3">
+              <a href="#" class="text-deco transition clr-primary"><h2 class="post-heading">SECP Registered 14,461 New Companies in FY19</h2></a>
+              <span class="date-posted-trending-now"><small><i class="far fa-clock"></i> February, 5th 2018</small></span>
+              <p class="my-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.</p><a href="#" class="view-full">Read More..</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 sidebar-dt py-5">
+          <aside class="sidemenu">
+            <h4 class="sidebar-heading px-2 py-1 mb-3">Featured Posts</h4>
+              <!-- Item-1 -->
+              <div class="row mb-2 post-item post-one">
+                <div class="post-image-small col-4">
+                  <a href="#"><img src="images/post1.jpeg"></a>
+                </div>
+                <div class="post-content col-8 px-0 py-2">
+                  <a href="#" class="text-deco clr-primary"><h6 class="post-heading">Ex-Banker Gary Cohn Emerges as Economic Powerhouse</h6></a>
+                </div>
+              </div>
+              <!-- Item-2 -->
+              <div class="row mb-2 post-item post-one">
+                <div class="post-image-small col-4">
+                  <a href="#"><img src="images/post2.jpg"></a>
+                </div>
+                <div class="post-content col-8 px-0 py-2">
+                  <a href="#" class="text-deco clr-primary"><h6 class="post-heading">SECP Registered 14,461 New Companies in FY19</h6></a>
+                </div>
+              </div>
+              <!-- Item-3 -->
+              <div class="row mb-2 post-item post-one">
+                <div class="post-image-small col-4">
+                  <a href="#"><img src="images/post3.jpg"></a>
+                </div>
+                <div class="post-content col-8 px-0 py-2">
+                  <a href="#" class="text-deco clr-primary"><h6 class="post-heading">20 Photos to Inspire You to Visit Petra</h6></a>
+                </div>
+              </div>
+              <!-- Item-4 -->
+              <div class="row mb-2 post-item post-one">
+                <div class="post-image-small col-4">
+                  <a href="#"><img src="images/post1.jpeg"></a>
+                </div>
+                <div class="post-content col-8 px-0 py-2">
+                  <a href="#" class="text-deco clr-primary"><h6 class="post-heading">Ex-Banker Gary Cohn Emerges as Economic Powerhouse</h6></a>
+                </div>
+              </div>
+              <!-- Item-5 -->
+              <div class="row mb-2 post-item post-one">
+                <div class="post-image-small col-4">
+                  <a href="#"><img src="images/post2.jpg"></a>
+                </div>
+                <div class="post-content col-8 px-0 py-2">
+                  <a href="#" class="text-deco clr-primary"><h6 class="post-heading">SECP Registered 14,461 New Companies in FY19</h6></a>
+                </div>
+              </div>
+              <!-- Item-6 -->
+              <div class="row mb-2 post-item post-one">
+                <div class="post-image-small col-4">
+                  <a href="#"><img src="images/post3.jpg"></a>
+                </div>
+                <div class="post-content col-8 px-0 py-2">
+                  <a href="#" class="text-deco clr-primary"><h6 class="post-heading">20 Photos to Inspire You to Visit Petra</h6></a>
+                </div>
+              </div>
+
+            <h4 class="sidebar-heading px-2 py-1">Follow Us</h4>
+            <div class="social-follow-section">
+              <a href="#"><i class="fab fa-facebook-square"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>              
+            </div>
+            
+            <h4 class="sidebar-heading px-2 py-1">Browse Categories</h4>
+            <div class="browse-categories">
+              <ul>
+                <li><a href="#">Technology</a></li>
+                <li><a href="#">Entertainment</a></li>
+                <li><a href="#">Education</a></li>
+                <li><a href="#">Recipes</a></li>
+                <li><a href="#">Fashion</a></li>
+                <li><a href="#">Space Research</a></li>
+                <li><a href="#">Thoughts</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Reviews</a></li>
+                <li><a href="#">TV shows</a></li>
+                <li><a href="#">Entertainment</a></li>
+                <li><a href="#">Education</a></li>
+                <li><a href="#">Recipes</a></li>
+                <li><a href="#">Lifestyle</a></li>
+                <li><a href="#">PSL News</a></li>
+                <li><a href="#">Life Hacks</a></li>
+                <li><a href="#">Quotes</a></li>
+                <li><a href="#">View More</a></li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-dt pt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 logo-footer d-flex align-items-center flex-column justify-content-around">
+          <!-- <h1 class="ff-playfair display-4 text-white" data-aos="fade-right">Daily<small>Trends</small></h1> -->
+          <img src="images/logo-new.png" width="200px">
+          <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+        </div>
+        <div class="col-md-3 px-5">
+          <nav>
+            <h2 class="heading-style2 text-white">Quick Links</h2>
+            <ul class="cs-ul-list-style">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Team</a></li>
+              <li><a href="#">Members</a></li>
+              <li><a href="#">Authors</a></li>
+              <li><a href="#">Sitemap</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-md-3">
+          <nav>
+            <h2 class="heading-style2 text-white">Must Read</h2>
+            <ul class="cs-ul-list-style">
+              <li><a href="#">Contributions</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms &amp; Conditions</a></li>
+              <li><a href="#">Sponsorships</a></li>
+              <li><a href="#">Become a Member</a></li>
+              <li><a href="#">FAQs</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-md-3 subscription">
+          <h2 class="heading-style2 text-white">Get Email Alerts</h2>
+          <input type="email" name="email" placeholder="Type your email">
+          <input type="submit" name="submit" value="Subscribe">
+          <div class="social-follow-section">
+              <a href="#"><i class="fab fa-facebook-square"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>              
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <span class="heading-style2 font-weight-bolder text-white" style="font-size: 24px; padding: 10px 0;">Disclaimer :</span> <span class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua.</span>
+        </div>
+      </div>
+    </div> -->
+    <div class="copyrights mt-5" style="background-color: #252525;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 d-flex align-items-center flex-row justify-content-center">
+            <p class="text-center my-2" style="color: #6b6a6a;">Copyrights &copy; 2020-2021 | All Rights Reserved &reg; By DailyTrendsPK.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+  <script type="text/javascript">
+    function searchToggle() {
+      var x = document.getElementById('search-box').classList.toggle("toggle-search");
+      
+    }
+    (function () {
+      var header = document.querySelector('.header');
+      var icon = document.querySelector('.icon-container');
+      var sidebarToggle = document.querySelector('.mobile-menu-toggle')
+      icon.onclick = function () {
+        header.classList.toggle('menu-open');
+        sidebarToggle.classList.toggle('active-x')
+      }
+    }());
+    function hideSidebar() {
+      var y = document.querySelector(".mobile-menu-toggle")
+      y.classList.toggle("active-x")
+    }
+    function toggleMenu() {
+      document.querySelector('.menu-items-header-nav').classList.toggle('menu-items-header-nav-active');
+    }
+    window.onscroll = function() {myFunction()};
+      var navbar = document.getElementById('navbar');
+      var mainContent = document.querySelector('.main-content')
+      var sticky = navbar.offsetTop;
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky");
+          mainContent.classList.add("pt-4")
+        } else {
+          navbar.classList.remove("sticky");
+          mainContent.classList.remove("pt-4")
+        }
+      }
+  </script>
+
+  
+  <!-- Font Awesome CDN -->
+  <script src="https://kit.fontawesome.com/ef1042a680.js" crossorigin="anonymous"></script>
+
+  <!-- Typer.js CDN -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Animate on scroll js CDN -->
+  <script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  </body>
+</html>
